@@ -6,6 +6,7 @@ return array(
         'response' => 'Darya\Http\Response',
         'router'   => 'Darya\Routing\Router',
         'session'  => 'Darya\Http\Session',
+        'storage'  => 'Darya\Storage\Readable',
         'view'     => 'Darya\View\Resolver'
     ),
     'database.type' => 'mysql',
