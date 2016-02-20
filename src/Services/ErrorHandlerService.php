@@ -25,15 +25,15 @@ class ErrorHandlerService implements Provider
     
     public function handle(Request $request, Response $response)
     {
-			$status = $response->status();
-			
-			$response->content($this->view->create("error/$status", array(
-				'http_host' => $request->host(),
-				'request_uri' => $request->path(),
-				'signature' => $request->server('server_signature')
-			)));
-			
-			return $response;
+        $status = $response->status();
+        
+        $response->content($this->view->create("error/$status", array(
+            'http_host' => $request->host(),
+            'request_uri' => $request->path(),
+            'signature' => $request->server('server_signature')
+        )));
+        
+        return $response;
     }
     
     public function register(Container $container)
