@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33dcf068af205ea1682e6793a80af5a3",
-    "content-hash": "f9c1672f6d83bc38fdac2fab54249b9a",
+    "hash": "2fb1c291f2d21b540ff971a8f1b6aacf",
+    "content-hash": "d488e86d491b9e9e5593b5ce10556389",
     "packages": [
         {
             "name": "darya/framework",
-            "version": "v0.5.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/darya/framework.git",
-                "reference": "480b815d2b36660f25d877206aef5948148ea32e"
+                "reference": "64f1fac18c6ecb40c4d55c24b5db981e35391454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darya/framework/zipball/480b815d2b36660f25d877206aef5948148ea32e",
-                "reference": "480b815d2b36660f25d877206aef5948148ea32e",
+                "url": "https://api.github.com/repos/darya/framework/zipball/64f1fac18c6ecb40c4d55c24b5db981e35391454",
+                "reference": "64f1fac18c6ecb40c4d55c24b5db981e35391454",
                 "shasum": ""
             },
             "require": {
@@ -52,12 +52,14 @@
             ],
             "description": "Web application framework",
             "keywords": [
+                "Active Record",
                 "darya",
                 "framework",
                 "library",
-                "mvc"
+                "mvc",
+                "orm"
             ],
-            "time": "2016-02-18 23:18:13"
+            "time": "2016-02-20 17:37:45"
         },
         {
             "name": "darya/smarty",
@@ -210,6 +212,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "darya/framework": 20,
         "darya/smarty": 20
     },
     "prefer-stable": false,

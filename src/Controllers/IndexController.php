@@ -2,6 +2,7 @@
 namespace Prolist\Controllers;
 
 use Darya\Routing\Controller;
+use Prolist\Models\Session;
 
 class IndexController extends Controller
 {
