@@ -1,3 +1,4 @@
 [
+    "Prolist\\Services\\HttpService",
     "Prolist\\Services\\ViewService"
 ]

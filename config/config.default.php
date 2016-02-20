@@ -1,7 +1,10 @@
 <?php
 return array(
     'aliases' => array(
-        'view' => 'Darya\View\Resolver'
+        'request'  => 'Darya\Http\Request',
+        'response' => 'Darya\Http\Response',
+        'session'  => 'Darya\Http\Session',
+        'view'     => 'Darya\View\Resolver'
     ),
     'database.type' => 'mysql',
     'database.host' => 'localhost',
