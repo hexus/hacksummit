@@ -1,0 +1,11 @@
+{
+	"type": "project",
+	"require": {
+		"php": ">=5.5",
+		"darya/framework": "0.5.x",
+		"darya/smarty": "*@dev"
+	},
+	"require-dev": {
+		"ccampbell/chromephp": "4.1.x"
+	}
+}

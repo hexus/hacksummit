@@ -1,2 +1,5 @@
 # hacksummit
-hack.summit() hackathon project
+
+hack.summit() hackathon project.
+
+Project-focused list application.
