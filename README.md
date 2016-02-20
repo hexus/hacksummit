@@ -1,5 +1,3 @@
-# hacksummit
+# Prolist
 
-hack.summit() hackathon project.
-
-Project-focused list application.
+Project-focused list application. A hack.summit() hackathon project.
