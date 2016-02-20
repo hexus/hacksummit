@@ -1,5 +1,7 @@
 [
     "Prolist\\Services\\HttpService",
     "Prolist\\Services\\ViewService",
-    "Prolist\\Services\\RoutingService"
+    "Prolist\\Services\\RoutingService",
+    "Prolist\\Services\\MySqlService",
+    "Prolist\\Services\\DatabaseStorageService"
 ]

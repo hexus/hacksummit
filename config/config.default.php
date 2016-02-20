@@ -1,6 +1,7 @@
 <?php
 return array(
     'aliases' => array(
+        'database' => 'Darya\Database\Connection',
         'request'  => 'Darya\Http\Request',
         'response' => 'Darya\Http\Response',
         'router'   => 'Darya\Routing\Router',
