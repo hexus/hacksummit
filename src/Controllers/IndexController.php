@@ -8,7 +8,12 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $this->template->select('index');
+        $arguments = array();
+        
+        $ids = Session::listing('id');
+        $arguments['sessions'] = count($ids);
+        
+        $this->template->select('index', $arguments);
         
         return $this->template;
     }
