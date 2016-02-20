@@ -1,4 +1,4 @@
 <?php
-require __DIR__ . '/../bootstrap.php';
+$application = require __DIR__ . '/../bootstrap.php';
 
-echo 'Hello world!';
+echo $application->view->create('index')->render();
