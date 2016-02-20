@@ -3,6 +3,7 @@ return array(
     'aliases' => array(
         'request'  => 'Darya\Http\Request',
         'response' => 'Darya\Http\Response',
+        'router'   => 'Darya\Routing\Router',
         'session'  => 'Darya\Http\Session',
         'view'     => 'Darya\View\Resolver'
     ),

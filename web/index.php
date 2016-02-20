@@ -1,4 +1,4 @@
 <?php
 $application = require __DIR__ . '/../bootstrap.php';
 
-echo $application->view->create('index')->render();
+echo $application->router->respond($application->request, $application->response);

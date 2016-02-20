@@ -25,7 +25,8 @@ $application = new Application(array(
         return new Config($config);
     },
     
-    'config' => 'Prolist\Models\Config'
+    'config' => 'Prolist\Models\Config',
+    'event'  => 'Darya\Events\Dispatcher'
 ));
 
 foreach ($application->config->services as $service) {
