@@ -1,5 +1,10 @@
 {extends "layout"}
 
-{block "content"}
-    <h2>{$session->name|default:'New session'} <span class="text-muted">{$session->key}</span></h2>
+{block "styles"}
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css"/>
+{/block}
+
+{block "scripts"}
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+    <script src="/assets/js/app.js"></script>
 {/block}

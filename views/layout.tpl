@@ -18,7 +18,7 @@
                     <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-align-left"></span> Prolist</a>
                 </div>
                 <ul class="nav navbar-nav">
-                
+                    
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
