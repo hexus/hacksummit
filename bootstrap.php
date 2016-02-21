@@ -5,6 +5,8 @@ use Darya\Common\Autoloader;
 use Darya\Service\Application;
 use Prolist\Models\Config;
 
+class_alias('ChromePhp', 'Chrome');
+
 $autoloader = new Autoloader(__DIR__, array(
 	'Prolist' => 'src'
 ));
@@ -15,8 +17,9 @@ $application = new Application(array(
     'Prolist\Models\Config' => function ($application) {
         $config = include __DIR__ . '/config/config.default.php';
         
-        if (is_file(__DIR__ . '/config/config.php'))
+        if (is_file(__DIR__ . '/config/config.php')) {
             $config = array_merge($config, include __DIR__ . '/config/config.php');
+        }
         
         foreach ($config['aliases'] as $alias => $target) {
             $application->alias($alias, $target);

@@ -28,6 +28,18 @@
             </div>
         </nav>
         <div class="content">
+            <div class="container">
+                {block "messages"}
+                    {if $flashes.error}
+                        {foreach $flashes.error as $error}
+                            <div class="alert alert-danger alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Whoops!</strong> {$error}
+                            </div>
+                        {/foreach}
+                    {/if}
+                {/block}
+            </div>
             {block "top"}
                 
             {/block}
