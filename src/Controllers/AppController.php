@@ -9,11 +9,16 @@ class AppController extends Controller
     public function index($sessionKey = null) {
         $arguments = array();
         
-        \Chrome::log(Session::find(array('key' => $sessionKey)));
-        
         $session = Session::find(array('key' => $sessionKey));
         
+        if (!$session) {
+            $this->request->flash('error', "We couldn't find that session.");
+            $this->response->redirect('/');
+            
+            return $this->response;
+        }
         
+        $arguments['session'] = $session;
         
         $this->template->select('app', $arguments);
         
