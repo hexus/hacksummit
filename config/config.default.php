@@ -9,6 +9,7 @@ return array(
         'storage'  => 'Darya\Storage\Readable',
         'view'     => 'Darya\View\Resolver'
     ),
+    'base_url'      => '',
     'database.type' => 'mysql',
     'database.host' => 'localhost',
     'database.user' => '',

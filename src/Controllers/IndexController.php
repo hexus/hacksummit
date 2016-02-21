@@ -18,8 +18,6 @@ class IndexController extends Controller
         
         $arguments['flashes'] = $this->request->flashes();
         
-        \Chrome::log($arguments['flashes']);
-        
         // Session::listing('id') only retrieves one, for some reason
         $ids = Session::distinct('id', array(
             'modified >=' => date('Y-m-d H:i:s', strtotime('-1 hour'))

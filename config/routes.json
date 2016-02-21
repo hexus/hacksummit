@@ -1,0 +1,9 @@
+{
+    "/api/:controller/:action/:params": {
+        "namespace": "Prolist\\Controllers\\Api"
+    },
+    "/:controller/:action/:params": null,
+    "/:controller/:params": null,
+    "/:action/:params": null,
+    "/": null
+}

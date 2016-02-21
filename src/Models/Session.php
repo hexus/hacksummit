@@ -11,22 +11,27 @@ class Session extends Record
         'modified' => 'datetime'
     );
     
+    protected $relations = array(
+        'projects' => array('has_many', 'Prolist\Models\Project')
+    );
+    
     public static function findExisting(Request $request)
     {
         $sessionKey = $request->session('key');
         $cookiesKey = $request->cookie('key');
         
-        \Chrome::log($sessionKey);
-        \Chrome::log($cookiesKey);
-        
         $sessionSession = static::find(array(
             'key' => $sessionKey
         ));
+        
+        if ($sessionSession) {
+            return $sessionSession;
+        }
         
         $cookiesSession = static::find(array(
             'key' => $cookiesKey
         ));
         
-        return $sessionSession ?: $cookiesSession;
+        return $cookiesSession;
     }
 }

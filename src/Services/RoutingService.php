@@ -11,12 +11,14 @@ class RoutingService implements Provider
     {
         $container->register(array(
             'Darya\Routing\Router' => function ($container) {
-                $router = new Router(array(
+                $routes = $container->config->routes ?: array(
                     '/:controller/:action/:params' => null,
                     '/:controller/:params' => null,
                     '/:action/:params' => null,
                     '/' => null
-                ), array(
+                );
+                
+                $router = new Router($routes, array(
                     'namespace' => 'Prolist\Controllers'
                 ));
                 
