@@ -2,6 +2,7 @@
 require __DIR__ . '/vendor/autoload.php';
 
 use Darya\Common\Autoloader;
+use Darya\Events\Dispatcher;
 use Darya\Service\Application;
 use Prolist\Models\Config;
 
@@ -27,6 +28,7 @@ $application = new Application(array(
         
         return new Config($config);
     },
+    'Darya\Events\Dispatcher' => new Dispatcher,
     
     'config' => 'Prolist\Models\Config',
     'event'  => 'Darya\Events\Dispatcher'
@@ -39,5 +41,15 @@ foreach ($application->config->services as $service) {
 }
 
 $application->boot();
+
+$application->event->listen('mysql.query', function($result) use ($application) {
+    if ($application->config->debug) {
+    	Chrome::log(array($result->query->string, json_encode($result->query->parameters)));
+    	
+    	if ($result->error) {
+    		Chrome::error(array($result->error->number, $result->error->message));
+    	}
+    }
+});
 
 return $application;

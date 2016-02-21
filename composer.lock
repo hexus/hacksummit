@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/darya/framework.git",
-                "reference": "8279a55a943441b5a2dad643725a68a57fbf31df"
+                "reference": "5286a2a7874f8cc17b6fe966ef6e03fee097e2d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/darya/framework/zipball/8279a55a943441b5a2dad643725a68a57fbf31df",
-                "reference": "8279a55a943441b5a2dad643725a68a57fbf31df",
+                "url": "https://api.github.com/repos/darya/framework/zipball/5286a2a7874f8cc17b6fe966ef6e03fee097e2d0",
+                "reference": "5286a2a7874f8cc17b6fe966ef6e03fee097e2d0",
                 "shasum": ""
             },
             "require": {
@@ -59,7 +59,7 @@
                 "mvc",
                 "orm"
             ],
-            "time": "2016-02-21 19:27:08"
+            "time": "2016-02-21 23:08:49"
         },
         {
             "name": "darya/smarty",

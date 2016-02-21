@@ -6,6 +6,10 @@ body > .content {
     padding-top: 63px;
 }
 
+.btn {
+    font-size: 13px;
+}
+
 .btn-lg {
     font-size: 18px;
 }

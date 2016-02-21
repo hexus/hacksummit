@@ -3,6 +3,7 @@ namespace Prolist\Controllers;
 
 use Darya\Routing\Controller;
 use Prolist\Models\Session;
+use Prolist\Models\Project;
 
 class AppController extends Controller
 {

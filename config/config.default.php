@@ -9,11 +9,12 @@ return array(
         'storage'  => 'Darya\Storage\Readable',
         'view'     => 'Darya\View\Resolver'
     ),
-    'base_url'      => '',
+    'base_url' => '',
     'database.type' => 'mysql',
     'database.host' => 'localhost',
     'database.user' => '',
     'database.pass' => '',
     'database.name' => '',
+    'debug'    => false,
     'services' => json_decode(file_get_contents(__DIR__ . '/services.json'), true)
 );

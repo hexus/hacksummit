@@ -21,6 +21,8 @@ class MySqlService implements Provider
                     $config['database.name']
                 );
                 
+                $connection->setEventDispatcher($container->event);
+                
                 return $connection;
             }
         ));
