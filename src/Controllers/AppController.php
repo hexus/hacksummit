@@ -18,6 +18,7 @@ class AppController extends Controller
             return $this->response;
         }
         
+        $session->projects;
         $arguments['session'] = $session;
         
         $this->template->select('app', $arguments);

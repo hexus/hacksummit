@@ -10,4 +10,8 @@ class Project extends Record
         'created'  => 'datetime',
         'modified' => 'datetime'
     );
+    
+    protected $relations = array(
+        'session' => array('belongs_to', 'Prolist\Models\Session')
+    );
 }
