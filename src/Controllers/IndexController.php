@@ -10,7 +10,10 @@ class IndexController extends Controller
     {
         $arguments = array();
         
-        $ids = Session::listing('id');
+        $ids = Session::listing('id', array(
+            'modified >' => date('Y-m-d H:i:s', strtotime('-1 hour'))
+        ));
+        
         $arguments['sessions'] = count($ids);
         
         $this->template->select('index', $arguments);

@@ -1,0 +1,27 @@
+body {
+    background-color: #fafafa;
+}
+
+body > .content {
+    padding-top: 60px;
+}
+
+.btn-lg {
+    font-size: 18px;
+}
+
+.nav-right {
+    float: right;
+}
+
+.navbar .nav > li > a {
+    font-size: 14px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.jumbotron, .well {
+    background-color: #fafafa;
+}
