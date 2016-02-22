@@ -1,0 +1,30 @@
+.project-list, .project-list ol, .project-list ul {
+    padding-left: 16px;
+    list-style: none;
+}
+
+.project {
+    font-size: 18px;
+    padding-left: 6px;
+}
+
+.project-handle:hover {
+    cursor: move;
+}
+
+.project-handle > .glyphicon {
+    color: #98978b; /* .text-muted */
+    font-size: 75%;
+}
+
+.project-name {
+    padding: 4px 8px;
+}
+
+.project-handle, .project-name {
+    display: inline-block;
+}
+
+.project-placeholder {
+    background: #eee;
+}

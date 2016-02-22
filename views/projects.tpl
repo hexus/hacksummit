@@ -6,11 +6,16 @@
     <h3>Projects</h3>
     
     <div class="projects">
-        <ul class="projects-list sortable">
+        <ol class="project-list">
             {foreach $projects as $project}
-                <li class="project"><div class="project-name sortable-handle">{$project->name}</div></li>
+                <li class="project">
+                    <div class="project-handle">
+                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                    </div>
+                    <div class="project-name" contenteditable="true">{$project->name}</div>
+                </li>
             {/foreach}
-        </ul>
+        </ol>
         <div class="add-project btn btn-primary">Add project</div>
     </div>
 {/block}
