@@ -22,6 +22,9 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a href="#">{date('H:i')}</a>
+                    </li>
+                    <li>
                         <a href="#" data-toggle="modal" data-target=".help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
                     </li>
                 </ul>

@@ -19,6 +19,9 @@ class AppController extends Controller
             return $this->response;
         }
         
+        $session->modified = time();
+        $session->save();
+        
         $arguments['session'] = $session;
         $arguments['projects'] = $session->projects;
         
