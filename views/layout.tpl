@@ -22,7 +22,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        <a href="#" data-toggle="modal" data-target=".help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
                     </li>
                 </ul>
             </div>
@@ -47,6 +47,26 @@
                 {block "content"}
                     
                 {/block}
+            </div>
+        </div>
+        <div class="help-modal modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</span></button>
+                        <h4>About Prolist</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>This project was brought to life for the <a target="_blank" href="https://hacksummit.org/">hack.summit()</a> <a target="_blank" href="https://www.koding.com/Hackathon">hackathon</a> of 2016.</p>
+                        <p>Unfortunately I didn't make enough time at the weekend to dedicate to the project, and <a target="_blank" href="https://github.com/hexus/hacksummit/compare/5c149627e29c6b3cf0de6c092ec094a30855da5e...88f76fea57d60f6d1ebbbadacc6f59a4db89bef9">spent the entirety of the first day setting up the framework</a>.</p>
+                        <p>Herein lies a taster of what could have been. The app was intended as something similar to <a target="_blank" href="https://todoist.com">Todoist</a>, but for any kind of list, not just todo lists.</p>
+                        <p>I would have tried to retain Todoist's fantastic focus on dates as well, except this would be across the board. Projects, lists, and list items would all be dated and searchable/listable by date.</p>
+                        <p>The furthest I got was setting up anonymous no-login sessions with default projects that are editable and sortable on the front-end, but aren't persisted.</p>
+                        <p>Regardless of not reaching my minimum viable product, I had fun hacking this together and found a great jQuery plugin for nested sortable lists in the process.</p>
+                        <p>Cheers to the folks at hack.summit(),</p>
+                        <p><a target="_blank" href="https://github.com/hexus">Chris</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
