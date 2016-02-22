@@ -779,15 +779,22 @@
                 }
 
                 if (id) {
-                    var name = $(item).data("name");
-                    ret.push({
+                    var currentItem = {
                         "id": id[2],
                         "parent_id": pid,
                         "depth": depth,
                         "left": _left,
                         "right": right,
-                        "name": name
-                    });
+                    };
+                    
+                    var data = $(item).data();
+                    if (data.nestedSortableItem) {
+                        delete data.nestedSortableItem;
+                    }
+                    
+                    currentItem = $.extend({}, currentItem, data);
+                    
+                    ret.push(currentItem);
                 }
 
                 _left = right + 1;

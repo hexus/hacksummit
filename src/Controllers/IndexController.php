@@ -3,6 +3,7 @@ namespace Prolist\Controllers;
 
 use Darya\Http\Response;
 use Darya\Routing\Controller;
+use Prolist\Models\Project;
 use Prolist\Models\Session;
 
 class IndexController extends Controller
@@ -47,11 +48,21 @@ class IndexController extends Controller
                 'key' => uniqid(),
                 'created' => time()
             ));
+            
+            $projects = array();
+            
+            for ($i = 1; $i < 6; $i++) {
+                $projects[] = new Project(array(
+                    'name' => "Default project $i"
+                ));
+            }
+            
+            $session->projects()->set($projects);
         }
         
         $session->modified = time();
         
-        if ($session->save()) {
+        if ($session->save() && $session->projects()->save()) {
             $this->request->session->set('key', $session->key);
             $this->response->redirect('/app/' . $session->key);
             $this->response->cookies->set('key', $session->key, '+1 week');

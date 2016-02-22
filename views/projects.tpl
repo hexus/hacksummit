@@ -5,15 +5,14 @@
     
     <h3>Projects</h3>
     
+    <script type="text/html" class="project-template">
+        {include "project"}
+    </script>
+    
     <div class="projects">
         <ol class="project-list">
             {foreach $projects as $project}
-                <li class="project">
-                    <div class="project-handle">
-                        <span class="glyphicon glyphicon-menu-hamburger"></span>
-                    </div>
-                    <div class="project-name" contenteditable="true">{$project->name}</div>
-                </li>
+                {include "project" project=$project}
             {/foreach}
         </ol>
         <div class="add-project btn btn-primary">Add project</div>

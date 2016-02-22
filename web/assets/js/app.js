@@ -1,18 +1,20 @@
 (function($) {
     $(function($) {
-        $('.project-list').sortable({
+        var projectList = $('.project-list').nestedSortable({
+            items:  '.project',
             handle: '.project-handle',
-            items:  '> .project',
+            opacity: 0.75,
             // toleranceElement: '> div',
             placeholder: 'project-placeholder',
-            forcePlaceholderSize: true
+            forcePlaceholderSize: true,
+            maxLevels: 2
         });
         
-        $('[contenteditable').on('focus', function() {
+        $('.project-list').on('focus', '[contenteditable]', function() {
             $(this).data('before', $(this).html());
         });
         
-        $('.project-name').blur(function() {
+        $('.project-list').on('blur', '.project-name', function() {
             var text = $(this).text().replace(/\n/g, ' ');
             
             if (!text) {
@@ -20,11 +22,29 @@
             }
             
             $(this).text(text);
+            
+            var projectListData = projectList.sortable('toArray', {
+                attribute: 'data-id',
+                expression: /()(\d+)/,
+                startDepthCount: 0,
+                excludeRoot: true
+            });
+            
+            console.log(projectListData);
         }).keypress(function(e) {
             if (e.which === 13) {
                 e.preventDefault();
                 $(this).blur();
             }
+        });
+        
+        $('.add-project').click(function() {
+            var template = $($('.project-template').html());
+            
+            template.attr('data-id', -1);
+            template.find('.project-name').text('New project');
+            
+            $('.project-list').append(template);
         });
     });
 })(jQuery);
