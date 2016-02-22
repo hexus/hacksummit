@@ -53,7 +53,9 @@ class IndexController extends Controller
             
             for ($i = 1; $i < 6; $i++) {
                 $projects[] = new Project(array(
-                    'name' => "Default project $i"
+                    'name' => "Default project $i",
+                    'created' => time(),
+                    'modified' => time()
                 ));
             }
             
